@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = (client, message, args) => {
+module.exports.run = (client, message) => {
     var g = message.guild;
     /*message.reply("Created at: " + g.createdAt);
     message.reply("Region: " + g.region);
