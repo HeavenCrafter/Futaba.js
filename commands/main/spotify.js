@@ -1,10 +1,7 @@
 const Discord = require("discord.js");
 const convert = require("parse-ms");
 
-module.exports = {
-    name: "spotify",
-    description: "Get users Spotify listening details",
-    run: async (client, message, args) => {
+exports.run = async (client, message, args) => {
     let user;
     if (message.mentions.users.first()) {
         user = message.mentions.users.first();
@@ -35,7 +32,7 @@ module.exports = {
         let time = `${minutes}:${seconds}`;
 
         const embed = new Discord.MessageEmbed()
-        .setAuthor("Spotify Track Information", "https://image.flaticon.com/icons/svg/2111/2111624.svg")
+        .setAuthor("Spotify Track Information", "https://cdn.clipart.email/4d8fffab1d920be924e84f33d20d76b8_spotify-logo-png-transparent-spotify-logopng-images-pluspng_1024-1024.jpeg")
         .setColor(0x1ED768)
         .setThumbnail(image)
         .addField("Name:", name, true)
@@ -44,6 +41,17 @@ module.exports = {
         .addField("Duration:", time, false)
         .addField("Listen now on Spotify!", `[\`${artist} - ${name}\`](${url})`, false)
         return message.channel.send(embed)
-        }
     }
 }
+
+exports.help = {
+    name: "spotify",
+    description: "Show a Listening Spotify user status.",
+    usage: "/spotify [@user]",
+    example: "/spotify @ray#1337"
+  };
+  
+  exports.conf = {
+    aliases: [],
+    cooldown: 5
+  }
