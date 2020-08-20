@@ -3,7 +3,7 @@ const { prefix } = require("./config.json")
 const client = require("./handler/ClientBuilder.js"); 
 const client = new Client()
 
-require("./handler/module.js")(client);
+require("./handler/Module.js")(client);
 require("./handler/Event.js")(client);
 
 //Express Dependency
