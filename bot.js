@@ -1,6 +1,10 @@
 const { Client, Collection } = require("discord.js");
 const { prefix } = require("./config.json")
+const client = require("./handler/ClientBuilder.js"); 
 const client = new Client()
+
+require("./handler/module.js")(client);
+require("./handler/Event.js")(client);
 
 //Express Dependency
 const express = require('express');
