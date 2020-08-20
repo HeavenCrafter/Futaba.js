@@ -1,5 +1,4 @@
 const { Client, Collection } = require("discord.js");
-const { prefix } = require("./config.json")
 const client = require("./handler/ClientBuilder.js"); 
 const client = new Client()
 
