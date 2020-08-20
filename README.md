@@ -1,5 +1,6 @@
 # Futaba.js 双葉 🍁
 A personal bot for HeavenHell Entertainment.
+[![HeavenHell Entertainment](https://discord.com/api/guilds/707269837646200842/widget.png?style=shield)](https://discord.com/invite/ySsX7yF) [![Run on Repl.it](https://repl.it/badge/github/HeavenCrafter/Futaba.js)](https://repl.it/github/HeavenCrafter/Futaba.js)
 ![Futaba](https://cdn.discordapp.com/attachments/718085539173105687/740554375998734336/anime-rascal-does-not-dream-of-bunny-girl-senpai-rio-futaba-hd-wallpaper-preview.jpg)
 
 
@@ -70,7 +71,3 @@ I also have a few HeavenHell admin related commands/events and features that I w
 
 Also, Discord. For the love of fucking god. I did not release my token to the public, it doesn't even keep the bot token here, leave me alone you beta bitch.
 ![Discord Being A Bitch](https://cdn.discordapp.com/attachments/718085539173105687/740432465847517284/unknown.png)
-
-[![Run on Repl.it](https://repl.it/badge/github/HeavenCrafter/Futaba.js)](https://repl.it/github/HeavenCrafter/Futaba.js)
-
-[![HeavenHell Entertainment](https://discord.com/api/guilds/707269837646200842/widget.png?style=banner3)](https://discord.com/invite/ySsX7yF)
