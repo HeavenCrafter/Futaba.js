@@ -2,9 +2,6 @@ const { Client, Collection } = require("discord.js");
 const { prefix } = require("./config.json")
 const client = new Client()
 
-client.commands = new Collection();
-client.aliases = new Collection();
-
 //Express Dependency
 const express = require('express');
 const app = express();
