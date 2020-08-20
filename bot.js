@@ -5,13 +5,10 @@ const client = new Client()
 client.commands = new Collection();
 client.aliases = new Collection();
 
+//Express Dependency
 const express = require('express');
 const app = express();
 const port = 3000;
-
-app.get('/', (req, res) => res.send('Express server is now online!'));
-
-app.listen(port, () => console.log(`Express server started successfully`));
 
 ["command"].forEach(handler => {
   require(`./handlers/${handler}`)(client);
@@ -37,8 +34,6 @@ client.on("message", async message => {
   }
 });
 
-client.login(process.env.BOT_TOKEN);
-
 client.on('ready', () => {
   client.channels.cache.get(process.env.STARTUP_CHANNEL).send("**おはよ,** <@694138001273651271>.")
   console.log("Logged in using the token: " + process.env.BOT_TOKEN)
@@ -54,3 +49,7 @@ client.on('ready', () => {
 
   console.log('Online.')
 });
+
+client.login(process.env.BOT_TOKEN);
+app.get('/', (req, res) => res.send('Express server is now online!'));
+app.listen(port, () => console.log(`Express server started successfully`));
