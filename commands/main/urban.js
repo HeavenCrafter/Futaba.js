@@ -1,11 +1,7 @@
 const Discord = require("discord.js");
 const urban = require("urban");
 
-module.exports = {
-  name: "urban",
-  description: "Look up a word on Urban Dictionary",
-  usage: "urban <word>",
-    run: async (client, message, args) => {
+exports.run = async (client, message, args) => {
     urban(args).first(json => {
 
       if (!json) return message.channel.send({
@@ -25,6 +21,18 @@ module.exports = {
         .setTitle(json.word);
 
       message.channel.send(embed);
-});
-  }
+  });
+}
+
+exports.help = {
+  name: "urban",
+  description: "Lookup a word on the Urban Dictionary",
+  usage: "/urban",
+  example: "/urban"
+};
+
+exports.conf = {
+  aliases: ["ub"],
+  cooldown: 1 // This number is a seconds, not a milliseconds.
+  // 1 = 1 seconds.
 }
