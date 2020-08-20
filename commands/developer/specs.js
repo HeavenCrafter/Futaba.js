@@ -3,7 +3,7 @@ const os = require('os');
 const cpuStat = require('cpu-stat');
 
 exports.run = async (client, message) => {
-    if (!client.config.owners.includes(message.author.id)) {
+    if (client.config.owners.includes(message.author.id)) {
         cpuStat.usagePercent(function (error, percent, seconds) {
             if (error) {
                 return console.error(error)
@@ -26,6 +26,33 @@ exports.run = async (client, message) => {
     }
 }
 
+function formatBytes (a, b) {
+    if (0 == a) return "0 Bytes";
+    let c = 1024,
+        d = b || 2,
+        e = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"],
+        f = Math.floor(Math.log(a) / Math.log(c));
+    return parseFloat((a / Math.pow(c, f)).toFixed(d)) + " " + e[f]
+}
+
+function parseDur(ms) {
+    let seconds = ms / 1000,
+        days = parseInt(seconds / 86400);
+    seconds = seconds % 86400
+    let hours = parseInt(seconds / 3600);
+    seconds = seconds % 3600
+    let minutes = parseInt(seconds / 60);
+    seconds = parseInt(seconds % 60)
+    if (days) {
+        return `${days} day, ${hours} hours, ${minutes} minutes`
+    } else if (hours) {
+        return `${hours} hours, ${minutes} minutes, ${seconds} seconds`
+    } else if (minutes) {
+        return `${minutes} minutes, ${seconds} seconds`
+    }
+    return `${seconds} second(s)`
+}
+
 exports.help = {
     name: "specifications",
     description: "Shows the specifications of the bot's hosting platform",
@@ -36,31 +63,3 @@ exports.help = {
 exports.conf = {
     aliases: ["specs"]
 }
-
-function formatBytes (a, b) {
-if (0 == a) return "0 Bytes";
-let c = 1024,
-    d = b || 2,
-    e = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"],
-    f = Math.floor(Math.log(a) / Math.log(c));
-return parseFloat((a / Math.pow(c, f)).toFixed(d)) + " " + e[f]
-}
-
-function parseDur(ms) {
-let seconds = ms / 1000,
-    days = parseInt(seconds / 86400);
-seconds = seconds % 86400
-let hours = parseInt(seconds / 3600);
-seconds = seconds % 3600
-let minutes = parseInt(seconds / 60);
-seconds = parseInt(seconds % 60)
-if (days) {
-  return `${days} day, ${hours} hours, ${minutes} minutes`
-} else if (hours) {
-  return `${hours} hours, ${minutes} minutes, ${seconds} seconds`
-} else if (minutes) {
-  return `${minutes} minutes, ${seconds} seconds`
-}
-return `${seconds} second(s)`
-}
-
