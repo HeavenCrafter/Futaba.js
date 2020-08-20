@@ -6,3 +6,4 @@ module.exports = client => {
     let file = require(`../events/${event}`);
     client.on(event.split(".")[0], (...args) => file(client, ...args));
   }
+}

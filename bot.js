@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
-const client = require("./handler/ClientBuilder.js"); 
-const client = new Client()
+const futaba = require("./handler/ClientBuilder.js"); 
+const client = new futaba()
 
 require("./handler/Module.js")(client);
 require("./handler/Event.js")(client);
