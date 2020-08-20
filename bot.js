@@ -1,4 +1,4 @@
-const { Client, Collection } = require("discord.js");
+const Discord = require("discord.js");
 const client = require("./handler/ClientBuilder.js"); 
 const client = new Client()
 
