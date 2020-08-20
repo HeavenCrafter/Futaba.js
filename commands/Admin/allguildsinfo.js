@@ -29,7 +29,7 @@ module.exports.run = (client, message, args) => {
 }
 
 exports.help = {
-    name: "guilds",
+    name: "guildsinfo",
     description: "-",
     usage: "-",
     example: "-"
