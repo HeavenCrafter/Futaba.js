@@ -17,6 +17,13 @@ client.on("message", async message => {
   }
 });
 
+client.login(process.env.SECRET).catch(console.error);
+app.get('/', (req, res) => res.send('Express server is now online!'));
+app.listen(port, () => console.log(`Express server started successfully`));
+client.package = require("./package.json");
+client.on("warn", console.warn);
+client.on("error", console.error); 
+
 client.on('ready', () => {
   client.channels.cache.get(process.env.STARTUP_CHANNEL).send("**おはよ,** <@694138001273651271>.")
   console.log("Logged in using the token: " + process.env.BOT_TOKEN)
@@ -32,7 +39,3 @@ client.on('ready', () => {
 
   console.log('Online.')
 });
-
-client.login(process.env.BOT_TOKEN);
-app.get('/', (req, res) => res.send('Express server is now online!'));
-app.listen(port, () => console.log(`Express server started successfully`));
