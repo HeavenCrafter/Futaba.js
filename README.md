@@ -72,3 +72,5 @@ Also, Discord. For the love of fucking god. I did not release my token to the pu
 ![Discord Being A Bitch](https://cdn.discordapp.com/attachments/718085539173105687/740432465847517284/unknown.png)
 
 [![Run on Repl.it](https://repl.it/badge/github/HeavenCrafter/Futaba.js)](https://repl.it/github/HeavenCrafter/Futaba.js)
+
+[![HeavenHell Entertainment](https://discord.com/api/guilds/707269837646200842/widget.png?style=banner3)](https://discord.com/invite/ySsX7yF)
