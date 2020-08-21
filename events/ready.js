@@ -8,9 +8,22 @@ module.exports = async (client) => {
 
     //Connects to the appropriate RCON server and awaits for console response
     const rcon = await Rcon.connect({
-        host: "195.201.86.30", port: 30329, password: "heaven_0928"
+        host: RCON_ADDRESS, port: process.env.RCON_PORT, password: process.env.RCON_PASSWORD
     })
-    console.log(await rcon.send("list"))
+
+    rcon.on("connect", () => console.log("Established Connection To RCON! Awaiting Authentication."))
+    rcon.on("authenticated", () => console.log("Authenticated Successfully!"))
+    rcon.on("end", () => console.log(`Disconnected from ` + process.env.RCON_ADDRESS + `:` + process.env.RCON_PORT))
+
+    let responses = await Promise.all([
+        rcon.send("gc"),
+        rcon.send("whitelist list"),
+        rcon.send("list")
+    ])
+
+    for (response of responses) {
+        console.log(response)
+    }
 
     //Checks server specifications and logs them on console on startup
     cpuStat.usagePercent(function (error, percent, seconds) {
