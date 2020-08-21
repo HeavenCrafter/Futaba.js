@@ -24,6 +24,17 @@ exports.run = async (client, message) => {
         console.log(response)
         message.channel.send(`*Console* > ` + response)
         message.channel.send(`Estimated time took to ran command: ${client.ws.ping} ms`)
+        if(process.env.CHANNEL_LOG) {
+            console.log(`Logged to channel: ` + process.env.CHANNEL_LOG)
+            const embed = new Discord.MessageEmbed()
+            embed.setDescription('Timings report pasted.')
+            embed.addField('Time took to ran', `${client.ws.ping} ms`)
+            embed.addField('Response', response)
+            embed.setTimestamp()
+            client.channels.cache.get(process.env.CHANNEL_LOG).send(embed)
+        } else {
+            console.log(`The CHANNEL_LOG .env variable is not set, will not be logging any timings.`);
+        }
     }
 
     rcon.end()
