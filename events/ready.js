@@ -1,10 +1,18 @@
+const { Rcon } = require("rcon-client");
 const os = require('os');
 const cpuStat = require('cpu-stat');
 const Discord = require("discord.js");
 
-module.exports = client => {
+module.exports = async (client) => {
     console.log("The bot is ready!");
 
+    //Connects to the appropriate RCON server and awaits for console response
+    const rcon = await Rcon.connect({
+        host: "195.201.86.30", port: 30329, password: "heaven_0928"
+    })
+    console.log(await rcon.send("list"))
+
+    //Checks server specifications and logs them on console on startup
     cpuStat.usagePercent(function (error, percent, seconds) {
         if (error) {
             return console.error(error)
@@ -17,12 +25,13 @@ module.exports = client => {
         const usage = formatBytes(process.memoryUsage().heapUsed) // Mem Usage
         const Node = process.version // Node Ver
         const CPU = percent.toFixed(2) // CPU Usage
-        
+        //The actual logging part itself
         console.log('Bot Statistics:', `Server: ${guild} \nUser: ${user} \nChannel: ${channel} \nUsage: ${usage} \nNode: ${Node} \nCPU Usage: ${CPU}%`) // Use Grave accent or `` 
         console.log('Physical Statistics:', `CPU: ${cores} - ${cpuModel} \nUptime: ${parseDur(client.uptime)}`)
     })
 }
 
+//Formats bytes and stuff
 function formatBytes (a, b) {
     if (0 == a) return "0 Bytes";
     let c = 1024,
@@ -32,6 +41,7 @@ function formatBytes (a, b) {
     return parseFloat((a / Math.pow(c, f)).toFixed(d)) + " " + e[f]
 }
 
+//Formats the time and stuff
 function parseDur(ms) {
     let seconds = ms / 1000,
         days = parseInt(seconds / 86400);
