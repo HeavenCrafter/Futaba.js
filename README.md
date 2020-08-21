@@ -38,26 +38,35 @@ You can change it to whatever you want depending on how you host your bot. Wheth
 ## Installed npm packages
 * Current installed node npm packages includes:
   * [ascii-table](https://www.npmjs.com/package/ascii-table)
-  * [npm-fetch](https://www.npmjs.com/package/fetch)
+  * [fetch](https://www.npmjs.com/package/fetch)
   * [urban](https://www.npmjs.com/package/urban)
   * [weather-js](https://www.npmjs.com/package/weather-js)
+  * [body-parser](https://www.npmjs.com/package/body-parser)
+  * [express](https://www.npmjs.com/package/express)
+  * [minecraft-server-util](https://www.npmjs.com/package/minecraft-server-util)
+  * [moment](https://www.npmjs.com/package/moment)
+  * [ms](https://www.npmjs.com/package/ms)
+  * [node-superfetch](https://www.npmjs.com/package/node-superfetch)
+  * [os](https://www.npmjs.com/package/os)
+  * [pase-ms](https://www.npmjs.com/package/parse-ms)
+  * [cpu-stat](https://www.npmjs.com/package/cpu-stat)
 
 ## Future development plans for Futaba.js
 I'm most likely going to slow down in terms of working on this bot as there isn't much to do. I mean I do have plans for it but at this current moment, it is what it is.
 
 There are a couple things that I wanna get done but not right now at least.
 - [x] Command Handler
-- [x] FAQ Commands
-- [x] Version List Commands
-- [ ] Event Handler
+- [x] FAQ Commands (Done on 21.8.2020)
+- [x] Version List Commands (Done on 21.8.2020)
+- [x] Event Handler (Done on 21.8.2020)
 - [ ] Leveling System
-- [ ] Automated Help Command
+- [x] Automated Help Command (Done on 21.8.2020)
 - [ ] Specific User AFK Command
-- [ ] Statistic Command
-- [ ] User Info Command (For self and check other's info.)
-- [ ] Server Info Command
-- [x] Starboard Done, check out [Yuno.js](https://github.com/HeavenCrafter/Yuno.js), a fork of @Rushnett Starboard/Smugboard.
-- [ ] r/discord_irl Meme Command
+- [x] Statistic Command (Done on 21.8.2020)
+- [x] User Info Command (Done on 21.8.2020)
+- [x] Server Info Command (Done on 21.8.2020)
+- [x] Starboard (Done, check out [Yuno.js](https://github.com/HeavenCrafter/Yuno.js), a fork of @Rushnett Starboard/Smugboard.)
+- [x] r/discord_irl Meme Command (Done on 21.8.2020)
 - [ ] Raid Lockdown Command
 - [ ] Channel Archiving Command
 - [ ] Snipe Command
