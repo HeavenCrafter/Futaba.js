@@ -3,7 +3,7 @@ const os = require('os');
 const cpuStat = require('cpu-stat');
 const Discord = require("discord.js");
 
-module.exports = client => {
+module.exports = async (client) => {
     console.log("The bot is ready!");
 
     //Connects to the appropriate RCON server and awaits for console response
