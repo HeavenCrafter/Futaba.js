@@ -8,7 +8,7 @@ module.exports = async (client) => {
 
     //Connects to the appropriate RCON server and awaits for console response
     const rcon = await Rcon.connect({
-        host: RCON_ADDRESS, port: process.env.RCON_PORT, password: process.env.RCON_PASSWORD
+        host: process.env.RCON_ADDRESS, port: process.env.RCON_PORT, password: process.env.RCON_PASSWORD
     })
 
     //Responess when rcon.on(something) gets executed
