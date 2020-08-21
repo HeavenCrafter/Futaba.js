@@ -11,16 +11,19 @@ module.exports = async (client) => {
         host: RCON_ADDRESS, port: process.env.RCON_PORT, password: process.env.RCON_PASSWORD
     })
 
+    //Responess when rcon.on(something) gets executed
     rcon.on("connect", () => console.log("Established Connection To RCON! Awaiting Authentication."))
     rcon.on("authenticated", () => console.log("Authenticated Successfully!"))
     rcon.on("end", () => console.log(`Disconnected from ` + process.env.RCON_ADDRESS + `:` + process.env.RCON_PORT))
 
+    //These are the RCON commands that will be executed when it gets connected and authenticated successfully
     let responses = await Promise.all([
         rcon.send("gc"),
         rcon.send("whitelist list"),
         rcon.send("list")
     ])
 
+    //Logs all responses above
     for (response of responses) {
         console.log(response)
     }
@@ -38,6 +41,7 @@ module.exports = async (client) => {
         const usage = formatBytes(process.memoryUsage().heapUsed) // Mem Usage
         const Node = process.version // Node Ver
         const CPU = percent.toFixed(2) // CPU Usage
+
         //The actual logging part itself
         console.log('Bot Statistics:', `Server: ${guild} \nUser: ${user} \nChannel: ${channel} \nUsage: ${usage} \nNode: ${Node} \nCPU Usage: ${CPU}%`) // Use Grave accent or `` 
         console.log('Physical Statistics:', `CPU: ${cores} - ${cpuModel} \nUptime: ${parseDur(client.uptime)}`)
