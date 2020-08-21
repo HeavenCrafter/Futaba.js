@@ -4,7 +4,6 @@
   "description": "A personal bot for HeavenHell Entertainment.",
   "main": "bot.js",
   "dependencies": {
-    "ascii-table": "^0.0.9",
     "body-parser": "^1.19.0",
     "cpu-stat": "^2.0.1",
     "discord.js": "^12.3.1",
@@ -16,11 +15,9 @@
     "node-superfetch": "^0.1.10",
     "os": "^0.1.1",
     "parse-ms": "^2.1.0",
-    "rcon-client": "^4.2.2",
     "svjsl": "^1.9.4",
     "urban": "^0.3.2",
-    "weather-js": "^2.0.0",
-    "xmlhttprequest": "^1.8.0"
+    "weather-js": "^2.0.0"
   },
   "devDependencies": {},
   "scripts": {
