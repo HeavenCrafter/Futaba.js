@@ -72,7 +72,7 @@ There are a couple things that I wanna get done but not right now at least.
 - [ ] Snipe Command
 
 I also have a few HeavenHell admin related commands/events and features that I wanna get done too.
-- [ ] Minecraft RCON (Yes, I'm being dead serious, a full blown RCON through a Discord Bot.)
+- [x] Minecraft RCON (Done on 23.8.2020)
 - [ ] Automatic Minecraft Server Status Query (Sends a message whenever it can't ping the server or if its offline.)
 
 **Special thanks to @ansonfoong, @The-SourceCode and @Blob-Development for the wonderful Youtube series, it has definitely help me a lot throughout the development of Futaba.**
