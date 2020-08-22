@@ -6,7 +6,7 @@ exports.run = async (client, message) => {
 
     let sender = message.author;
 
-    console.log(`${sender.tag} ${sender.ID} pasting a timing check.`) + message.channel.send(`Stopping and Pasting the (if any) on-going timing check.`)
+    console.log(`${sender.tag} ${sender.ID} ran a timing check.`) + message.channel.send(`Running a timing check.`)
 
     const rcon = new Rcon({ host: process.env.RCON_ADDRESS, port: process.env.RCON_PORT, password: process.env.RCON_PASSWORD })
 
@@ -17,7 +17,7 @@ exports.run = async (client, message) => {
     await rcon.connect()
 
     let responses = await Promise.all([
-        rcon.send("timings paste"),
+        rcon.send("timings on"),
     ])
 
     for (response of responses) {
@@ -27,7 +27,7 @@ exports.run = async (client, message) => {
         if(process.env.CHANNEL_LOG) {
             console.log(`Logged to channel: ` + process.env.CHANNEL_LOG)
             const embed = new Discord.MessageEmbed()
-            embed.setDescription('Timings report completed.')
+            embed.setDescription('A timings check has been started.')
             embed.addField('Time took to ran', `${client.ws.ping} ms`)
             embed.addField('Response', response)
             embed.setTimestamp()
@@ -42,13 +42,13 @@ exports.run = async (client, message) => {
 
 
 exports.help = {
-    name: "timings-paste",
-    description: "Stops and paste a timings check on the connected RCON server",
-    usage: "!timings-paste",
-    example: "!timings-paste"
+    name: "Timings On",
+    description: "Starts a timings check on the connected RCON server",
+    usage: "!timings-on",
+    example: "!timings-on"
 }
 
 exports.conf = {
-    aliases: ["tms-paste", "tm-paste", "tms-pt", "tm-pt"],
-    cooldown: 5
+    aliases: ["tms-on", "tm-on"],
+    cooldown: 120
 }

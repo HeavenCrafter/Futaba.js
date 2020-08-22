@@ -42,7 +42,7 @@ exports.run = async (client, message) => {
 
 
 exports.help = {
-    name: "timings-report",
+    name: "Timings Report",
     description: "Sends a quick and short timings report",
     usage: "!timings-report",
     example: "!timings-report"
