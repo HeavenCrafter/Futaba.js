@@ -6,7 +6,7 @@ exports.run = async (client, message) => {
 
     let sender = message.author;
 
-    console.log(`${sender.tag} ${sender.ID} ran a timing check.`) + message.channel.send(`Running a timing check.`)
+    console.log(`${sender.tag} ran a timing check.`) + message.channel.send(`Running a timing check.`)
 
     const rcon = new Rcon({ host: process.env.RCON_ADDRESS, port: process.env.RCON_PORT, password: process.env.RCON_PASSWORD })
 
