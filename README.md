@@ -3,6 +3,7 @@ A personal bot for HeavenHell Entertainment.
 
 [![HeavenHell Entertainment](https://discord.com/api/guilds/707269837646200842/widget.png?style=shield)](https://discord.com/invite/ySsX7yF)
 [![Run on Repl.it](https://repl.it/badge/github/HeavenCrafter/Futaba.js)](https://repl.it/github/HeavenCrafter/Futaba.js)
+
 ![Futaba](https://cdn.discordapp.com/attachments/718085539173105687/740554375998734336/anime-rascal-does-not-dream-of-bunny-girl-senpai-rio-futaba-hd-wallpaper-preview.jpg)
 
 
