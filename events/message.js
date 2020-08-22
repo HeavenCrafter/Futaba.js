@@ -5,6 +5,10 @@ module.exports = async (client, message) => {
 
     let prefix = client.config.prefix;
 
+    if (message.content.toLowerCase().startsWith("oreo")) {
+        message.react("🥞");
+    }
+
     if (!message.content.startsWith(prefix)) return;
 
     let args = message.content.slice(prefix.length).trim().split(/ +/g);
