@@ -10,10 +10,6 @@ A personal bot for HeavenHell Entertainment.
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=HeavenCrafter_Futaba.js&metric=bugs)](https://sonarcloud.io/dashboard?id=HeavenCrafter_Futaba.js)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=HeavenCrafter_Futaba.js&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=HeavenCrafter_Futaba.js)
 
-[!Watchers](https://badgen.net/github/watchers/HeavenCrafter/Futaba.js)
-[!Dependencies](https://badgen.net/david/dep/HeavenCrafter/Futaba.js)
-[!License](https://badgen.net/github/license/HeavenCrafter/Futaba.js)
-
 ![Futaba](https://cdn.discordapp.com/attachments/718085539173105687/740554375998734336/anime-rascal-does-not-dream-of-bunny-girl-senpai-rio-futaba-hd-wallpaper-preview.jpg)
 
 
