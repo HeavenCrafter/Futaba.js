@@ -1,8 +1,17 @@
 # Futaba.js 双葉 🍁
 A personal bot for HeavenHell Entertainment.
 
-[![HeavenHell Entertainment](https://discord.com/api/guilds/707269837646200842/widget.png?style=shield)](https://discord.com/invite/ySsX7yF) [![Run on Repl.it](https://repl.it/badge/github/HeavenCrafter/Futaba.js)](https://repl.it/github/HeavenCrafter/Futaba.js)
+[![HeavenHell Entertainment](https://discord.com/api/guilds/707269837646200842/widget.png?style=shield)](https://discord.com/invite/ySsX7yF)
+[![Run on Repl.it](https://repl.it/badge/github/HeavenCrafter/Futaba.js)](https://repl.it/github/HeavenCrafter/Futaba.js)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=HeavenCrafter_Futaba.js&metric=alert_status)](https://sonarcloud.io/dashboard?id=HeavenCrafter_Futaba.js)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=HeavenCrafter_Futaba.js&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=HeavenCrafter_Futaba.js)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=HeavenCrafter_Futaba.js&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=HeavenCrafter_Futaba.js)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=HeavenCrafter_Futaba.js&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=HeavenCrafter_Futaba.js)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=HeavenCrafter_Futaba.js&metric=bugs)](https://sonarcloud.io/dashboard?id=HeavenCrafter_Futaba.js)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=HeavenCrafter_Futaba.js&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=HeavenCrafter_Futaba.js)
+
 ![Futaba](https://cdn.discordapp.com/attachments/718085539173105687/740554375998734336/anime-rascal-does-not-dream-of-bunny-girl-senpai-rio-futaba-hd-wallpaper-preview.jpg)
+
 
 
 **Currently only includes:**
@@ -72,7 +81,7 @@ There are a couple things that I wanna get done but not right now at least.
 - [ ] Snipe Command
 
 I also have a few HeavenHell admin related commands/events and features that I wanna get done too.
-- [ ] Minecraft RCON (Yes, I'm being dead serious, a full blown RCON through a Discord Bot.)
+- [x] Minecraft RCON (Done on 23.8.2020)
 - [ ] Automatic Minecraft Server Status Query (Sends a message whenever it can't ping the server or if its offline.)
 
 **Special thanks to @ansonfoong, @The-SourceCode and @Blob-Development for the wonderful Youtube series, it has definitely help me a lot throughout the development of Futaba.**
@@ -81,3 +90,12 @@ I also have a few HeavenHell admin related commands/events and features that I w
 
 Also, Discord. For the love of fucking god. I did not release my token to the public, it doesn't even keep the bot token here, leave me alone you beta bitch.
 ![Discord Being A Bitch](https://cdn.discordapp.com/attachments/718085539173105687/740432465847517284/unknown.png)
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/no-ragrets.svg)](https://forthebadge.com)
+
