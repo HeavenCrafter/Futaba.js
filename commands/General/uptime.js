@@ -8,7 +8,7 @@ exports.run = async (client, message) => {
     let minutes = Math.floor(totalSeconds / 60);
     let seconds = totalSeconds % 60;
 
-    message.channel.send(`${days} days, ${hours} hours, ${minutes} minutes`)
+    message.channel.send(`${days} days, ${hours} hours, ${minutes} minutes, ${seconds}`)
 }
 
 exports.help = {

@@ -1,7 +1,11 @@
 const Discord = require("discord.js");
 
 exports.run = async (client, message) => {
-    if (client.config.owners.includes(message.author.id)) {
+    if (!client.config.owners.includes(message.author.id)) {
+        message.delete();
+        message.reply("Sorry. But it seems that you're not Heaven.");
+
+    } else if (client.config.owners.includes(message.author.id)) {
         message.delete();
 
         const rules1 = new Discord.MessageEmbed()
@@ -34,7 +38,7 @@ exports.help = {
     description: "-",
     usage: "!rules",
     example: "!rules"
-};
+}
 
 exports.conf = {
     aliases: [],

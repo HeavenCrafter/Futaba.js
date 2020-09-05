@@ -10,6 +10,7 @@ exports.run = async (client, message) => {
     let upvotes = res.body[0].data.children[0].data.ups;
     let downvotes = res.body[0].data.children[0].data.downs;
     let numComments = res.body[0].data.children[0].data.num_comments;
+
     const embed = new Discord.MessageEmbed()
     .setTitle(`${title}`)
     .setURL(`${url}`)

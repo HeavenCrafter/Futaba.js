@@ -42,7 +42,7 @@ exports.run = async (client, message) => {
 
 
 exports.help = {
-    name: "Timings Paste",
+    name: "Timings-Paste",
     description: "Stops and paste (if any) timings check on the connected RCON server",
     usage: "!timings-paste",
     example: "!timings-paste"

@@ -33,8 +33,8 @@ exports.help = {
     description: "-",
     usage: "-",
     example: "-"
-  }
-  
+}
+
 exports.conf = {
     aliases: ["guilds"],
-  }
+}

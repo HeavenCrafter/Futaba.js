@@ -18,7 +18,6 @@ exports.run = async (client, message, args) => {
     .setDescription(`[Avatar URL of **${user.tag}**](${avatar})`)
     .setColor(0x1d1d1d)
     .setImage(avatar)
-
     return message.channel.send(embed);
 }
 

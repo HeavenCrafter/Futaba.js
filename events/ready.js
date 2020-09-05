@@ -1,7 +1,7 @@
 const { Rcon } = require("rcon-client");
 const os = require('os');
 const cpuStat = require('cpu-stat');
-const Discord = require("discord.js");
+const Discord = new Discord.Client();
 
 module.exports = async (client) => {
     console.log("The bot is ready!");

@@ -42,7 +42,7 @@ exports.run = async (client, message) => {
 
 
 exports.help = {
-    name: "Timings On",
+    name: "Timings-On",
     description: "Starts a timings check on the connected RCON server",
     usage: "!timings-on",
     example: "!timings-on"

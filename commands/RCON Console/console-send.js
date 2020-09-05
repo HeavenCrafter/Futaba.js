@@ -6,35 +6,22 @@ exports.run = async (client, message, args) => {
 
     if (args[0] === "pl") {
         message.channel.send("This commands has been disabled by default.");
-
-    } else {
-
-        let command = args.slice().join(' ');
-
-        const rcon = new Rcon({ host: process.env.RCON_ADDRESS, port: process.env.RCON_PORT, password: process.env.RCON_PASSWORD })
-
-        await rcon.connect()
-
-        let responses = await Promise.all([
-            rcon.send(command),
-        ])
-
-        for (response of responses) {
-            
-            const embed = new Discord.MessageEmbed()
-            embed.addField('Server Response', response)
-            embed.setFooter(`Ping Time > ${client.ws.ping} ms | Executed Command /${args}`)
-
-            message.channel.send(embed)
-
-            rcon.end()
-        }
     }
+
+    let command = args.slice(0).shift().toLowerCase().join(' ');
+
+    await rcon.send(command)
+
+    const embed = new Discord.MessageEmbed()
+    embed.addField('Server Response', response)
+    embed.setFooter(`Ping Time > ${client.ws.ping} ms | Executed Command /` + (command))
+    message.channel.send(embed)
+
+    message.channel.send("Error occured" + err)
 }
 
-
 exports.help = {
-    name: "Console Send",
+    name: "console-send",
     description: "Sends a command to the connected RCON server",
     usage: "!rcon",
     example: "!rcon tps"
