@@ -1,4 +1,4 @@
-const Discord = require("discord.js")({disableEveryone: False});
+const Discord = require("discord.js");
 
 exports.run = async (client, message, args) => {
     if (!client.config.owners.includes(message.author.id)) {
