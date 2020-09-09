@@ -17,10 +17,8 @@
     "os": "^0.1.1",
     "parse-ms": "^2.1.0",
     "rcon-client": "^4.2.2",
-    "svjsl": "^1.9.4",
     "urban": "^0.3.2",
-    "weather-js": "^2.0.0",
-    "winston": "^3.3.3"
+    "weather-js": "^2.0.0"
   },
   "devDependencies": {},
   "scripts": {
