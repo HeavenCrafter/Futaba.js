@@ -1,31 +1,8 @@
-const { Rcon } = require("rcon-client");
 const os = require('os');
 const cpuStat = require('cpu-stat');
 
 module.exports = async (client) => {
     console.log("The bot is ready!");
-
-    //Connects to the appropriate RCON server and awaits for console response
-    const rcon = await Rcon.connect({
-        host: process.env.RCON_ADDRESS, port: process.env.RCON_PORT, password: process.env.RCON_PASSWORD
-    })
-
-    //Responess when rcon.on(something) gets executed
-    rcon.on("connect", () => console.log("Established Connection To RCON! Awaiting Authentication."))
-    rcon.on("authenticated", () => console.log("Authenticated Successfully!"))
-    rcon.on("end", () => console.log(`Disconnected from ` + process.env.RCON_ADDRESS + `:` + process.env.RCON_PORT))
-
-    //These are the RCON commands that will be executed when it gets connected and authenticated successfully
-    let responses = await Promise.all([
-        rcon.send("gc"),
-        rcon.send("whitelist list"),
-        rcon.send("list")
-    ])
-
-    //Logs all responses above
-    for (response of responses) {
-        console.log(response)
-    }
 
     //Checks server specifications and logs them on console on startup
     cpuStat.usagePercent(function (error, percent, seconds) {

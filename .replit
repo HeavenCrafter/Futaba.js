@@ -1,2 +1,5 @@
 language = "nodejs"
 run = "node index.js"
+
+[nix]
+channel = "stable-22_05"
